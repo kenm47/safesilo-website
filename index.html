@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SafeSilo AI — Control Who Sees Data and Where It Goes</title>
-<meta name="description" content="Local AI that enforces who can access knowledge and which models and tools it can reach. Built for defense, MRO, and regulated teams. Starts at $500/month.">
+<meta name="description" content="Company AI that only shows each person what they're cleared to see, and only sends data to tools you approve. Built for defense, aircraft maintenance and other regulated teams. Starts at $500/month.">
 <link rel="canonical" href="https://safesilo.ai/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="SafeSilo AI — Control Who Sees Data and Where It Goes">
-<meta property="og:description" content="Local AI that enforces who can access knowledge and which models and tools it can reach. Built for defense, MRO, and regulated teams. Starts at $500/month.">
+<meta property="og:description" content="Company AI that only shows each person what they're cleared to see, and only sends data to tools you approve. Built for defense, aircraft maintenance and other regulated teams. Starts at $500/month.">
 <meta property="og:url" content="https://safesilo.ai/">
 <meta property="og:image" content="https://safesilo.ai/assets/og-card.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -28,7 +28,7 @@
     <label for="menu" class="burger" aria-hidden="true">≡</label>
     <nav>
       <a href="#how">How it works</a>
-      <a href="#paths">Paths</a>
+      <a href="#paths">The map</a>
       <a href="#use-cases">Use cases</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
@@ -46,26 +46,26 @@
     <div class="hero-copy">
     <p class="eyebrow">Who can reach it, and where it can go.</p>
     <h1>AI that only knows what you're allowed to know.</h1>
-    <p class="lead">…and only sends it where it's allowed to go. Role-based access and egress control for local AI, enforced on every question, document, model and tool.</p>
+    <p class="lead">SafeSilo lets your team use AI on sensitive company documents. Each person only gets answers from what they're cleared to see, and your data only goes to the AI tools you've approved.</p>
     <div class="cta-row">
       <a href="#book" class="btn btn-primary">Book a Demo <span>→</span></a>
       <a href="#pricing" class="btn btn-ghost">See pricing</a>
     </div>
     </div>
     <div class="hero-art">
-    <p class="sr">Diagram: user tech_4 with role alpha asks the one SafeSilo AI a question. SafeSilo checks the role before retrieval. Only the Program Alpha silo is allowed. Customer A OEM and ITAR data are denied. Program Alpha data can go to the local LLM, but not to the cloud API, which is above its ceiling.</p>
+    <p class="sr">Diagram: a technician asks the one SafeSilo AI a question. SafeSilo first checks who is asking. Only the Program Alpha files are allowed. Customer A files and export-controlled data are denied. Program Alpha data can go to the local AI, but not to the cloud AI, which is not approved for it.</p>
     <pre class="ascii" aria-hidden="true">     user: tech_4 · role: alpha
                   │
                   v
 ┌───────────────────────────────────┐
 │         SAFESILO · one AI         │
-│    checks role BEFORE retrieval   │
+│     checks who is asking FIRST    │
 └────┬────────────┬────────────┬────┘
      │            │            │
      v            v            v
 ┌─────────┐  ┌─────────┐  ┌─────────┐
-│ PROGRAM │  │ CUST. A │  │ ITAR    │
-│ ALPHA   │  │ OEM     │  │ DATA    │
+│ PROGRAM │  │ CUST. A │  │ EXPORT  │
+│ ALPHA   │  │ FILES   │  │ DATA    │
 │ ███████ │  │ <span class="dim">░░░░░░░</span> │  │ <span class="dim">░░░░░░░</span> │
 └─────────┘  └─────────┘  └─────────┘
   <b>ALLOWED</b>      <span class="dim">DENIED</span>       <span class="dim">DENIED</span>
@@ -74,15 +74,16 @@
             v           <span class="dim">x</span>
        ┌─────────┐ ┌─────────┐
        │ LOCAL   │ │ CLOUD   │
-       │ LLM     │ │ API     │
+       │ AI      │ │ AI      │
        └─────────┘ └─────────┘
-         <b>ALLOWED</b>   <span class="dim">ABOVE CEILING</span></pre>
-    <p class="caption">Same model. Different answers. Different exits.</p>
+         <b>ALLOWED</b>   <span class="dim">NOT APPROVED</span></pre>
+    <p class="caption">Same AI. Different answers for each person.</p>
     </div>
     </div>
     <ul class="chips">
       <li>CMMC L2</li><li>ITAR / EAR</li><li>NIST 800-171</li><li>CUI</li>
     </ul>
+    <p class="gloss">CUI is sensitive government information. ITAR/EAR are U.S. export-control laws. CMMC and NIST 800-171 are defense cybersecurity standards.</p>
   </div>
 </section>
 
@@ -91,14 +92,14 @@
 <!-- PROBLEM -->
 <section id="problem">
   <div class="wrap">
-    <p class="eyebrow">The Flattening Problem</p>
-    <h2>Most AI ignores your org chart, and your perimeter.</h2>
-    <p class="lead">Point an AI at shared data and two things break. Every user can see every document. And every document can flow to whatever model, plugin or API the AI calls. In defense and MRO, either one is a spill, an export violation or a breached customer contract.</p>
+    <p class="eyebrow">The problem</p>
+    <h2>Most company AI treats everyone the same.</h2>
+    <p class="lead">Connect an AI to your shared files and two things go wrong. Anyone can ask about any document, even ones they shouldn't see. And your documents can be sent to whatever outside AI service or plug-in the AI uses. For defense and aircraft maintenance companies, either mistake can mean a security breach, an export-law violation or a broken customer contract.</p>
     <div class="grid four">
-      <div class="card"><h3>Spills</h3><p>CUI surfaced to an uncleared employee.</p></div>
-      <div class="card"><h3>Export violations</h3><p>ITAR/EAR tech data shown to an unauthorized person.</p></div>
-      <div class="card"><h3>Contract breaches</h3><p>One customer's data answering another customer's question.</p></div>
-      <div class="card"><h3>Silent egress</h3><p>Restricted data sent to an external model or connector nobody approved.</p></div>
+      <div class="card"><h3>Security spills</h3><p>Sensitive government information shown to an employee who isn't cleared.</p></div>
+      <div class="card"><h3>Export-law violations</h3><p>Export-controlled technical data shown to someone not authorized.</p></div>
+      <div class="card"><h3>Contract breaches</h3><p>One customer's data used to answer another customer's question.</p></div>
+      <div class="card"><h3>Silent leaks</h3><p>Restricted data sent to an outside AI service or app nobody approved.</p></div>
     </div>
   </div>
 </section>
@@ -109,27 +110,27 @@
 <section id="how">
   <div class="wrap">
     <p class="eyebrow">01 / How it works</p>
-    <h2>Control at retrieval, and at every exit.</h2>
-    <p class="lead">Who can reach it, and where it can go. Set once, enforced on every query.</p>
+    <h2>Check who's asking, and where the answer goes.</h2>
+    <p class="lead">Who can reach it, and where it can go. Set once, enforced on every question.</p>
     <div class="grid">
-      <div class="card"><span class="num">01</span><h3>Inherit</h3><p>Syncs existing permissions: Entra ID / AD groups, SharePoint and file-share ACLs.</p></div>
-      <div class="card"><span class="num">02</span><h3>Mark</h3><p>Reads and applies data markings: CUI, ITAR/EAR, program, customer, contract.</p></div>
-      <div class="card"><span class="num">03</span><h3>Define</h3><p>Admins add roles and silos SafeSilo-native when existing systems don't express the rule.</p></div>
-      <div class="card"><span class="num">04</span><h3>Enforce</h3><p>Every query is filtered to the user's entitlements <em>before</em> retrieval. The model never sees what the user can't. Every answer cites only permitted sources; every query is logged.</p></div>
-      <div class="card"><span class="num">05</span><h3>Contain</h3><p>Every destination (models, connectors, tools) gets a classification ceiling: Public, Internal or Restricted. Data above a destination's ceiling doesn't go there.</p></div>
-      <div class="card"><span class="num">06</span><h3>Observe first</h3><p>Roll out in Observe mode. SafeSilo maps every path and records what <em>would</em> be blocked, without breaking workflows. Switch to Enforce when you're ready.</p></div>
+      <div class="card"><span class="num">01</span><h3>Connect</h3><p>Reads who's allowed to see what from the systems you already use: your user directory (Entra ID / Active Directory), SharePoint and shared folders. Nothing to rebuild.</p></div>
+      <div class="card"><span class="num">02</span><h3>Label</h3><p>Tags documents by sensitivity and owner: government-controlled, export-controlled, program, customer, contract.</p></div>
+      <div class="card"><span class="num">03</span><h3>Set rules</h3><p>Admins add roles and walled-off groups of documents ("silos") when your existing systems don't cover a rule.</p></div>
+      <div class="card"><span class="num">04</span><h3>Check first</h3><p>Before the AI looks at anything, SafeSilo narrows it to what that person may see. The AI never sees the rest. Every answer cites only allowed sources, and every question is logged.</p></div>
+      <div class="card"><span class="num">05</span><h3>Control exits</h3><p>Every outside AI service or tool gets a sensitivity limit: Public, Internal or Restricted. Data above that limit never goes there.</p></div>
+      <div class="card"><span class="num">06</span><h3>Test run first</h3><p>Start in watch-only mode. SafeSilo maps every path and records what it <em>would</em> block, without disrupting anyone. Switch on enforcement when you're ready.</p></div>
     </div>
-    <p class="callout">&gt; deny by default · filter before retrieval · ceiling on every exit · log every answer</p>
-    <p class="muted">Local by default, on hardware inside your perimeter; external destinations only where policy allows. Built on <a href="https://dplyd.io" class="hi">DPLYD</a>.</p>
+    <p class="callout">&gt; default is no · check who's asking first · limit where data goes · log every answer</p>
+    <p class="muted">Runs on your own servers by default. Connects to outside AI services only where your policy allows. Built on <a href="https://dplyd.io" class="hi">DPLYD</a>.</p>
   </div>
 </section>
 
 <!-- PATHS -->
 <section id="paths">
   <div class="wrap">
-    <p class="eyebrow">02 / See every path</p>
+    <p class="eyebrow">02 / The whole picture</p>
     <h2>Who can reach it, and where it can go.</h2>
-    <p class="lead">Every group, role, skill, knowledge source and destination on one map. See what's allowed, what's blocked and what's misconfigured, before an assessor or an incident finds it for you.</p>
+    <p class="lead">One picture of every group, role, skill, document source and AI tool, showing what's allowed, what's blocked and what's set up wrong. See it before an auditor or an incident does.</p>
     <blockquote class="ask">
       <p>Who are the people using the system, what are the agents (roles and skills) using the tools, and what confidential knowledge do they have access to?</p>
       <ul>
@@ -143,12 +144,12 @@
     <ul class="legend">
       <li><i class="k-g"></i> Allowed</li>
       <li><i class="k-r"></i> Blocked</li>
-      <li><i class="k-a"></i> Observed / needs attention</li>
+      <li><i class="k-a"></i> Needs attention</li>
     </ul>
     <ul class="proof">
-      <li>Visual audit trail of every access and egress path</li>
-      <li>Configuration gaps flagged automatically</li>
-      <li>Export the map as assessment evidence</li>
+      <li>A visual record of who can reach what, and where data can go</li>
+      <li>Setup gaps flagged automatically</li>
+      <li>Export the map as audit evidence</li>
     </ul>
     <a href="#book" class="btn btn-primary">See it on your org <span>→</span></a>
   </div>
@@ -158,28 +159,28 @@
 <section id="use-cases">
   <div class="wrap">
     <p class="eyebrow">03 / Who it's for</p>
-    <h2>Built for teams where the wrong answer is a reportable event.</h2>
+    <h2>Built for teams where one wrong answer is a serious incident.</h2>
     <div class="grid">
       <div class="card">
         <span class="icon">[✖] DEFENSE</span>
         <h3>Programs stay separate.</h3>
-        <p>Classified-adjacent, CUI, and unrestricted work in one AI, walled by program and clearance.</p>
-        <ul><li>Program-level silos</li><li>CUI marking enforcement</li><li>Audit evidence on demand</li><li>CUI never routed to unapproved models</li></ul>
+        <p>Sensitive, controlled and everyday work can share one AI. Each person only reaches what their program and clearance allow.</p>
+        <ul><li>Separate walls for each program</li><li>Government-information rules enforced</li><li>Audit proof on demand</li><li>Sensitive data never sent to unapproved AI</li></ul>
       </div>
       <div class="card">
-        <span class="icon">[⚙] MRO</span>
+        <span class="icon">[⚙] AIRCRAFT MAINTENANCE (MRO)</span>
         <h3>Every customer's data stays theirs.</h3>
-        <p>One shop servicing competing airlines and OEMs. Technicians get answers from the manuals and records they're authorized for, nothing else.</p>
-        <ul><li>Customer/OEM data walls</li><li>ITAR/EAR person-level gating</li><li>Defense vs commercial separation on one floor</li><li>Customer data stays off third-party tools</li></ul>
+        <p>One shop servicing competing airlines and manufacturers. Technicians get answers only from the manuals and records they're authorized for.</p>
+        <ul><li>Each customer's data kept separate</li><li>Export-law limits applied person by person</li><li>Defense and commercial work kept apart on one shop floor</li><li>Customer data kept out of third-party tools</li></ul>
       </div>
       <div class="card">
         <span class="icon">[§] REGULATED ENTERPRISE</span>
         <h3>Need-to-know, automated.</h3>
-        <p>Legal, healthcare, finance: matter walls, PHI scope, deal teams.</p>
-        <ul><li>Ethical walls</li><li>Least-privilege by default</li><li>Inherits existing ACLs</li><li>Ceilings on every AI connector</li></ul>
+        <p>Law firms, healthcare, finance: client walls, patient-data limits, deal teams.</p>
+        <ul><li>Walls between teams that must stay separate</li><li>Least access by default</li><li>Uses your existing permissions</li><li>Limits on every AI connection</li></ul>
       </div>
     </div>
-    <p class="strip">tech_4 asks: "torque spec for the #2 engine mount?" → answers from Customer A's manual only. Customer B's revision: invisible.</p>
+    <p class="strip">A technician asks: "What's the torque spec for the #2 engine mount?" The answer comes from Customer A's manual only. Customer B's version stays invisible.</p>
   </div>
 </section>
 
@@ -191,14 +192,14 @@
     <div class="grid">
       <div class="card price">
         <h3>$500/month</h3>
-        <p>Includes 1 seat, then $25 per additional seat per month. Software, models, and management on hardware you own.</p>
+        <p>Includes 1 user, then $25 per additional user per month. Software, AI models and management, running on hardware you own.</p>
       </div>
       <div class="card price">
         <h3>$5,000/month, fully leased</h3>
-        <p>As many seats as the hardware supports. Hardware, models, maintenance, patching, and support. No CapEx.</p>
+        <p>As many users as the hardware supports. Hardware, AI models, maintenance, updates and support included. No upfront cost.</p>
       </div>
     </div>
-    <p class="note">No per-token billing. No overages. Example: 10 users on your hardware = $725/month.</p>
+    <p class="note">No per-use billing. No overage charges. Example: 10 users on your hardware = $725/month.</p>
     <a href="https://cal.com/kdplyd/30min" target="_blank" rel="noopener" class="btn btn-primary">Book a Demo <span>→</span></a>
   </div>
 </section>
@@ -208,13 +209,13 @@
   <div class="wrap">
     <p class="eyebrow">05 / FAQ</p>
     <h2>Questions.</h2>
-    <details><summary>How is this different from permission-aware search in Copilot or Glean?</summary><p>Those run in someone else's cloud and trust a sync of your permissions. SafeSilo runs on your hardware and enforces before the model sees content.</p></details>
-    <details><summary>Do we have to rebuild our permissions?</summary><p>No. It inherits existing groups and ACLs. You only add roles where your current systems fall short.</p></details>
-    <details><summary>What happens when someone's access changes?</summary><p>Entitlements resync on a schedule you set (default: near-real-time for directory changes). Revoked access is revoked in the next query.</p></details>
-    <details><summary>Can it run air-gapped?</summary><p>Yes. Fully disconnected deployments with offline updates. Where external models or tools are allowed, SafeSilo controls exactly which data can reach them.</p></details>
-    <details><summary>Can we prove it to an assessor?</summary><p>Every query logs user, role, sources retrieved, and sources withheld. Export for audit.</p></details>
-    <details><summary>Can our team still use cloud models or tools?</summary><p>Yes, where policy allows. Each destination has a classification ceiling; data above it stays home.</p></details>
-    <details><summary>Will turning this on break existing workflows?</summary><p>No. Start in Observe mode: everything runs and every would-be block is recorded. Enforce when the map looks right.</p></details>
+    <details><summary>How is this different from Copilot or Glean?</summary><p>Those run in someone else's cloud and rely on a copy of your permissions. SafeSilo runs on your hardware and checks permissions before the AI sees any content.</p></details>
+    <details><summary>Do we have to rebuild our permissions?</summary><p>No. It reads your existing groups and permissions. You only add rules where your current systems fall short.</p></details>
+    <details><summary>What happens when someone's access changes?</summary><p>Access updates on a schedule you set (default: near-real-time for changes in your user directory). Once someone's access is removed, it's gone as of their next question.</p></details>
+    <details><summary>Can it run with no internet connection?</summary><p>Yes. It can run fully disconnected, with updates delivered offline. If you do allow outside AI services or tools, SafeSilo controls exactly which data can reach them.</p></details>
+    <details><summary>Can we prove it to an auditor?</summary><p>Every question is logged: who asked, their role, which sources were used and which were kept out. Export it for audits.</p></details>
+    <details><summary>Can our team still use cloud models or tools?</summary><p>Yes, where policy allows. Each outside tool has a sensitivity limit; data above it stays home.</p></details>
+    <details><summary>Will turning this on break existing workflows?</summary><p>No. Start in watch-only mode: everything keeps working and every would-be block is recorded. Turn on enforcement when the map looks right.</p></details>
   </div>
 </section>
 
@@ -233,7 +234,7 @@
       <label>NAME<input type="text" name="name" required autocomplete="name"></label>
       <label>WORK EMAIL<input type="email" name="email" required autocomplete="email"></label>
       <label>COMPANY<input type="text" name="company" autocomplete="organization"></label>
-      <label>WHAT DO YOU NEED TO WALL OFF?<textarea name="need" rows="4"></textarea></label>
+      <label>WHAT NEEDS TO BE KEPT SEPARATE?<textarea name="need" rows="4"></textarea></label>
       <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button type="submit" class="btn btn-primary">Send →</button>
     </form>
@@ -248,7 +249,7 @@
     <a class="brand" href="#top"><img src="assets/logo-256.png" alt="" width="20" height="36"><span>Safesilo AI</span></a>
     <p class="muted" style="margin-top:12px"><em>Who can reach it, and where it can go.</em></p>
     <div class="foot-links">
-      <a href="#how">How it works</a><a href="#paths">Paths</a><a href="#use-cases">Use cases</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="#book">Book a Demo</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a>
+      <a href="#how">How it works</a><a href="#paths">The map</a><a href="#use-cases">Use cases</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="#book">Book a Demo</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a>
     </div>
     <ul class="chips"><li>CMMC L2</li><li>ITAR / EAR</li><li>NIST 800-171</li><li>CUI</li></ul>
     <div class="foot-bottom">
