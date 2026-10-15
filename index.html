@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SafeSilo AI — Control Who Sees Data and Where It Goes</title>
+<meta name="description" content="Local AI that enforces who can access knowledge and which models and tools it can reach. Built for defense, MRO, and regulated teams. Starts at $500/month.">
+<link rel="canonical" href="https://safesilo.ai/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SafeSilo AI — Control Who Sees Data and Where It Goes">
+<meta property="og:description" content="Local AI that enforces who can access knowledge and which models and tools it can reach. Built for defense, MRO, and regulated teams. Starts at $500/month.">
+<meta property="og:url" content="https://safesilo.ai/">
+<meta property="og:image" content="https://safesilo.ai/assets/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+<header>
+  <div class="bar">
+    <a class="brand" href="#top" aria-label="Safesilo AI home"><img src="assets/logo-256.png" alt="" width="20" height="36"><span>Safesilo AI</span></a>
+    <input type="checkbox" id="menu" aria-label="Toggle menu">
+    <label for="menu" class="burger" aria-hidden="true">≡</label>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#paths">Paths</a>
+      <a href="#use-cases">Use cases</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#book" class="btn btn-primary btn-sm">Book a Demo</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+    <div class="hero-copy">
+    <p class="eyebrow">Who can reach it, and where it can go.</p>
+    <h1>AI that only knows what you're allowed to know.</h1>
+    <p class="lead">…and only sends it where it's allowed to go. Role-based access and egress control for local AI, enforced on every question, document, model and tool.</p>
+    <div class="cta-row">
+      <a href="#book" class="btn btn-primary">Book a Demo <span>→</span></a>
+      <a href="#pricing" class="btn btn-ghost">See pricing</a>
+    </div>
+    </div>
+    <div class="hero-art">
+    <p class="sr">Diagram: user tech_4 with role alpha asks the one SafeSilo AI a question. SafeSilo checks the role before retrieval. Only the Program Alpha silo is allowed. Customer A OEM and ITAR data are denied. Program Alpha data can go to the local LLM, but not to the cloud API, which is above its ceiling.</p>
+    <pre class="ascii" aria-hidden="true">     user: tech_4 · role: alpha
+                  │
+                  v
+┌───────────────────────────────────┐
+│         SAFESILO · one AI         │
+│    checks role BEFORE retrieval   │
+└────┬────────────┬────────────┬────┘
+     │            │            │
+     v            v            v
+┌─────────┐  ┌─────────┐  ┌─────────┐
+│ PROGRAM │  │ CUST. A │  │ ITAR    │
+│ ALPHA   │  │ OEM     │  │ DATA    │
+│ ███████ │  │ <span class="dim">░░░░░░░</span> │  │ <span class="dim">░░░░░░░</span> │
+└─────────┘  └─────────┘  └─────────┘
+  <b>ALLOWED</b>      <span class="dim">DENIED</span>       <span class="dim">DENIED</span>
+     │
+     └──────┬───────────┐
+            v           <span class="dim">x</span>
+       ┌─────────┐ ┌─────────┐
+       │ LOCAL   │ │ CLOUD   │
+       │ LLM     │ │ API     │
+       └─────────┘ └─────────┘
+         <b>ALLOWED</b>   <span class="dim">ABOVE CEILING</span></pre>
+    <p class="caption">Same model. Different answers. Different exits.</p>
+    </div>
+    </div>
+    <ul class="chips">
+      <li>CMMC L2</li><li>ITAR / EAR</li><li>NIST 800-171</li><li>CUI</li>
+    </ul>
+  </div>
+</section>
+
+<div class="wave" aria-hidden="true">≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿</div>
+
+<!-- PROBLEM -->
+<section id="problem">
+  <div class="wrap">
+    <p class="eyebrow">The Flattening Problem</p>
+    <h2>Most AI ignores your org chart, and your perimeter.</h2>
+    <p class="lead">Point an AI at shared data and two things break. Every user can see every document. And every document can flow to whatever model, plugin or API the AI calls. In defense and MRO, either one is a spill, an export violation or a breached customer contract.</p>
+    <div class="grid four">
+      <div class="card"><h3>Spills</h3><p>CUI surfaced to an uncleared employee.</p></div>
+      <div class="card"><h3>Export violations</h3><p>ITAR/EAR tech data shown to an unauthorized person.</p></div>
+      <div class="card"><h3>Contract breaches</h3><p>One customer's data answering another customer's question.</p></div>
+      <div class="card"><h3>Silent egress</h3><p>Restricted data sent to an external model or connector nobody approved.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="wave" aria-hidden="true">∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈</div>
+
+<!-- HOW -->
+<section id="how">
+  <div class="wrap">
+    <p class="eyebrow">01 / How it works</p>
+    <h2>Control at retrieval, and at every exit.</h2>
+    <p class="lead">Who can reach it, and where it can go. Set once, enforced on every query.</p>
+    <div class="grid">
+      <div class="card"><span class="num">01</span><h3>Inherit</h3><p>Syncs existing permissions: Entra ID / AD groups, SharePoint and file-share ACLs.</p></div>
+      <div class="card"><span class="num">02</span><h3>Mark</h3><p>Reads and applies data markings: CUI, ITAR/EAR, program, customer, contract.</p></div>
+      <div class="card"><span class="num">03</span><h3>Define</h3><p>Admins add roles and silos SafeSilo-native when existing systems don't express the rule.</p></div>
+      <div class="card"><span class="num">04</span><h3>Enforce</h3><p>Every query is filtered to the user's entitlements <em>before</em> retrieval. The model never sees what the user can't. Every answer cites only permitted sources; every query is logged.</p></div>
+      <div class="card"><span class="num">05</span><h3>Contain</h3><p>Every destination (models, connectors, tools) gets a classification ceiling: Public, Internal or Restricted. Data above a destination's ceiling doesn't go there.</p></div>
+      <div class="card"><span class="num">06</span><h3>Observe first</h3><p>Roll out in Observe mode. SafeSilo maps every path and records what <em>would</em> be blocked, without breaking workflows. Switch to Enforce when you're ready.</p></div>
+    </div>
+    <p class="callout">&gt; deny by default · filter before retrieval · ceiling on every exit · log every answer</p>
+    <p class="muted">Local by default, on hardware inside your perimeter; external destinations only where policy allows. Built on <a href="https://dplyd.io" class="hi">DPLYD</a>.</p>
+  </div>
+</section>
+
+<!-- PATHS -->
+<section id="paths">
+  <div class="wrap">
+    <p class="eyebrow">02 / See every path</p>
+    <h2>Who can reach it, and where it can go.</h2>
+    <p class="lead">Every group, role, skill, knowledge source and destination on one map. See what's allowed, what's blocked and what's misconfigured, before an assessor or an incident finds it for you.</p>
+    <blockquote class="ask">
+      <p>Who are the people using the system, what are the agents (roles and skills) using the tools, and what confidential knowledge do they have access to?</p>
+      <ul>
+        <li><b>People</b> → Groups</li>
+        <li><b>Agents</b> → Roles and skills</li>
+        <li><b>Tools</b> → Destinations</li>
+        <li><b>Confidential knowledge</b> → Knowledge sources</li>
+      </ul>
+    </blockquote>
+    <div class="graph"><svg viewBox="0 0 1000 400" role="img" aria-labelledby="gt" xmlns="http://www.w3.org/2000/svg" class="graph-svg"><title id="gt">Access graph showing roles connected to knowledge sources and AI destinations, with allowed, blocked and flagged paths.</title><path d="M190 77.0 C230.0 77.0 230.0 77.0 270 77.0" class="e-g"/><path d="M190 192.0 C230.0 192.0 230.0 192.0 270 192.0" class="e-g"/><path d="M190 307.0 C230.0 307.0 230.0 307.0 270 307.0" class="e-g"/><path d="M460 77.0 C500.0 77.0 500.0 77.0 540 77.0" class="e-g"/><path d="M460 192.0 C500.0 192.0 500.0 192.0 540 192.0" class="e-g"/><path d="M460 307.0 C500.0 307.0 500.0 307.0 540 307.0" class="e-g"/><path d="M730 77.0 C770.0 77.0 770.0 57.0 810 57.0" class="e-g"/><path d="M730 77.0 C770.0 77.0 770.0 161.0 810 161.0" class="e-g"/><path d="M730 192.0 C770.0 192.0 770.0 57.0 810 57.0" class="e-g"/><path d="M730 307.0 C770.0 307.0 770.0 57.0 810 57.0" class="e-g"/><path d="M730 307.0 C770.0 307.0 770.0 265.0 810 265.0" class="e-r"/><path d="M730 192.0 C770.0 192.0 770.0 369.0 810 369.0" class="e-a"/><text x="0" y="16" class="gh">GROUPS</text><rect x="0" y="50" width="190" height="54" rx="8" class="n"/><text x="12" y="82" class="nt">Program Alpha Team</text><rect x="0" y="165" width="190" height="54" rx="8" class="n"/><text x="12" y="197" class="nt">Commercial MRO</text><rect x="0" y="280" width="190" height="54" rx="8" class="n"/><text x="12" y="312" class="nt">Export-Authorized Eng.</text><text x="270" y="16" class="gh">ROLES</text><rect x="270" y="50" width="190" height="54" rx="8" class="n"/><text x="282" y="82" class="nt">Alpha Technician</text><rect x="270" y="165" width="190" height="54" rx="8" class="n"/><text x="282" y="197" class="nt">MRO Planner</text><rect x="270" y="280" width="190" height="54" rx="8" class="n"/><text x="282" y="312" class="nt">Licensed Engineer</text><text x="540" y="16" class="gh">KNOWLEDGE</text><rect x="540" y="50" width="190" height="54" rx="8" class="n"/><text x="552" y="73" class="nt">Program Alpha Docs</text><text x="552" y="92" class="ns">Restricted</text><rect x="540" y="165" width="190" height="54" rx="8" class="n"/><text x="552" y="188" class="nt">Customer A Manuals</text><text x="552" y="207" class="ns">Internal</text><rect x="540" y="280" width="190" height="54" rx="8" class="n"/><text x="552" y="303" class="nt">ITAR Tech Data</text><text x="552" y="322" class="ns">Restricted</text><text x="810" y="16" class="gh">DESTINATIONS</text><rect x="810" y="30" width="190" height="54" rx="8" class="n"/><text x="822" y="53" class="nt">Local LLM</text><text x="822" y="72" class="ns">Restricted</text><rect x="810" y="134" width="190" height="54" rx="8" class="n"/><text x="822" y="157" class="nt">Local Embeddings</text><text x="822" y="176" class="ns">Restricted</text><rect x="810" y="238" width="190" height="54" rx="8" class="n"/><text x="822" y="261" class="nt">Cloud LLM</text><text x="822" y="280" class="ns">Public</text><rect x="810" y="342" width="190" height="54" rx="8" class="n"/><text x="822" y="365" class="nt">Web Search Connector</text><text x="822" y="384" class="ns">no ceiling set</text></svg></div>
+    <ul class="legend">
+      <li><i class="k-g"></i> Allowed</li>
+      <li><i class="k-r"></i> Blocked</li>
+      <li><i class="k-a"></i> Observed / needs attention</li>
+    </ul>
+    <ul class="proof">
+      <li>Visual audit trail of every access and egress path</li>
+      <li>Configuration gaps flagged automatically</li>
+      <li>Export the map as assessment evidence</li>
+    </ul>
+    <a href="#book" class="btn btn-primary">See it on your org <span>→</span></a>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section id="use-cases">
+  <div class="wrap">
+    <p class="eyebrow">03 / Who it's for</p>
+    <h2>Built for teams where the wrong answer is a reportable event.</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="icon">[✖] DEFENSE</span>
+        <h3>Programs stay separate.</h3>
+        <p>Classified-adjacent, CUI, and unrestricted work in one AI, walled by program and clearance.</p>
+        <ul><li>Program-level silos</li><li>CUI marking enforcement</li><li>Audit evidence on demand</li><li>CUI never routed to unapproved models</li></ul>
+      </div>
+      <div class="card">
+        <span class="icon">[⚙] MRO</span>
+        <h3>Every customer's data stays theirs.</h3>
+        <p>One shop servicing competing airlines and OEMs. Technicians get answers from the manuals and records they're authorized for, nothing else.</p>
+        <ul><li>Customer/OEM data walls</li><li>ITAR/EAR person-level gating</li><li>Defense vs commercial separation on one floor</li><li>Customer data stays off third-party tools</li></ul>
+      </div>
+      <div class="card">
+        <span class="icon">[§] REGULATED ENTERPRISE</span>
+        <h3>Need-to-know, automated.</h3>
+        <p>Legal, healthcare, finance: matter walls, PHI scope, deal teams.</p>
+        <ul><li>Ethical walls</li><li>Least-privilege by default</li><li>Inherits existing ACLs</li><li>Ceilings on every AI connector</li></ul>
+      </div>
+    </div>
+    <p class="strip">tech_4 asks: "torque spec for the #2 engine mount?" → answers from Customer A's manual only. Customer B's revision: invisible.</p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="wrap">
+    <p class="eyebrow">04 / Pricing</p>
+    <h2>Two ways to run it.</h2>
+    <div class="grid">
+      <div class="card price">
+        <h3>$500/month</h3>
+        <p>Includes 1 seat, then $25 per additional seat per month. Software, models, and management on hardware you own.</p>
+      </div>
+      <div class="card price">
+        <h3>$5,000/month, fully leased</h3>
+        <p>As many seats as the hardware supports. Hardware, models, maintenance, patching, and support. No CapEx.</p>
+      </div>
+    </div>
+    <p class="note">No per-token billing. No overages. Example: 10 users on your hardware = $725/month.</p>
+    <a href="https://cal.com/kdplyd/30min" target="_blank" rel="noopener" class="btn btn-primary">Book a Demo <span>→</span></a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <p class="eyebrow">05 / FAQ</p>
+    <h2>Questions.</h2>
+    <details><summary>How is this different from permission-aware search in Copilot or Glean?</summary><p>Those run in someone else's cloud and trust a sync of your permissions. SafeSilo runs on your hardware and enforces before the model sees content.</p></details>
+    <details><summary>Do we have to rebuild our permissions?</summary><p>No. It inherits existing groups and ACLs. You only add roles where your current systems fall short.</p></details>
+    <details><summary>What happens when someone's access changes?</summary><p>Entitlements resync on a schedule you set (default: near-real-time for directory changes). Revoked access is revoked in the next query.</p></details>
+    <details><summary>Can it run air-gapped?</summary><p>Yes. Fully disconnected deployments with offline updates. Where external models or tools are allowed, SafeSilo controls exactly which data can reach them.</p></details>
+    <details><summary>Can we prove it to an assessor?</summary><p>Every query logs user, role, sources retrieved, and sources withheld. Export for audit.</p></details>
+    <details><summary>Can our team still use cloud models or tools?</summary><p>Yes, where policy allows. Each destination has a classification ceiling; data above it stays home.</p></details>
+    <details><summary>Will turning this on break existing workflows?</summary><p>No. Start in Observe mode: everything runs and every would-be block is recorded. Enforce when the map looks right.</p></details>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true">· ~ · ~ · ~ · ~ · ~ ·</div>
+
+<!-- BOOK -->
+<section id="book">
+  <div class="wrap">
+    <p class="eyebrow">Who can reach it, and where it can go.</p>
+    <h2>Show us your org chart. We'll show you every path.</h2>
+    <p class="lead">30 minutes with the founder. We'll map who can reach your data and where it can go, live.</p>
+    <div class="cta-row" style="margin-bottom:0">
+      <a href="https://cal.com/kdplyd/30min" target="_blank" rel="noopener" class="btn btn-primary">Book a Demo <span>→</span></a>
+    </div>
+    <form action="mailto:kendall@dplyd.io" method="post" enctype="text/plain">
+      <label>NAME<input type="text" name="name" required autocomplete="name"></label>
+      <label>WORK EMAIL<input type="email" name="email" required autocomplete="email"></label>
+      <label>COMPANY<input type="text" name="company" autocomplete="organization"></label>
+      <label>WHAT DO YOU NEED TO WALL OFF?<textarea name="need" rows="4"></textarea></label>
+      <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button type="submit" class="btn btn-primary">Send →</button>
+    </form>
+    <p class="muted" style="margin-top:22px">or email <a href="mailto:kendall@dplyd.io" class="hi">kendall@dplyd.io</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="assets/logo-256.png" alt="" width="20" height="36"><span>Safesilo AI</span></a>
+    <p class="muted" style="margin-top:12px"><em>Who can reach it, and where it can go.</em></p>
+    <div class="foot-links">
+      <a href="#how">How it works</a><a href="#paths">Paths</a><a href="#use-cases">Use cases</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="#book">Book a Demo</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a>
+    </div>
+    <ul class="chips"><li>CMMC L2</li><li>ITAR / EAR</li><li>NIST 800-171</li><li>CUI</li></ul>
+    <div class="foot-bottom">
+      <span>© 2026 SafeSilo AI</span>
+      <a href="https://dplyd.io">Built on DPLYD</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
