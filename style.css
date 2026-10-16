@@ -176,3 +176,4 @@ footer .wrap { padding-top: 48px; padding-bottom: 40px; }
 .ask li b { color: var(--cyan); font-weight: 700; }
 
 .gloss { font-size: 13px; color: var(--muted); max-width: 62ch; margin: 16px 0 0; }
+.hl { color: var(--cyan); }
